@@ -60,7 +60,7 @@ max(vector1)
 vector4 <- c(10:15)
 
 #
-c(vector1, vector4)
+aux <- c(vector1, vector4)
 
 #
 vector1 * vector4
@@ -74,6 +74,8 @@ toupper(vector2)
 #
 !vector3
 
+
+
 ```
 
 ### Exercise 1a: Vector
@@ -83,16 +85,16 @@ Find a 5-day forecast of temperatures (Fahrenheit) for Durham, North Carolina. C
 ```{r Vector Exercise}
 
 #Assign to the variable 'temps_F' a vector of high temperatures in F
-
+temps_F <- c(80,82,80,75,76)
 
 #What is the average of these temperatures 
-
+avg_temp <- mean(temps_F)
 
 #Compute the difference between each temperature and the average calculated above
-
+diff <- temps_F - avg_temp
 
 #Subtract 32 and multiply by 5/9ths to create a vector in Celsius
-
+celsius <- (temps_F - 32) * (5/9)
 
 ```
 
@@ -119,7 +121,7 @@ matrix3 <- matrix(
     c("un", "deux", "trois", "quatre")
     )
   ) 
-
+matrix3
 ```
 
 ### Matrix Operations
@@ -164,6 +166,10 @@ matrix4['R2','C1']
 Compute the mean of column "C2" in matrix4. (Should be 14.5)
 ```{r Matrix Exercise}
 
+mean(matrix4[ ,2])
+
+#or
+mean(matrix4[ ,'C2'])
 ```
 
 
@@ -195,13 +201,13 @@ list1$age
 #
 names(list1)
 
-#
+#access first 2 elements of list (name and mynumbers)
 list1[1:2]
 
-#
+#change the name to Janelle
 list1$name = "Janelle"
 
-#
+#changes value of fourth element (age)
 list1[[4]] = 44
 ```
 
