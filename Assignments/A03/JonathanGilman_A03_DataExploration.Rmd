@@ -4,10 +4,10 @@ author: "Jonathan Gilman"
 date: "Fall 2024"
 output:
   pdf_document:
+    ]
     latex_engine: xelatex
     pandoc_args: [
       "--variable", "geometry=margin=2.54cm"
-    ]
 editor_options: 
   chunk_output_type: console
 ---
